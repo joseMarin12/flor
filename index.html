@@ -13,8 +13,7 @@
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      height: 100vh;
-      overflow: auto;
+      min-height: 100vh;
       padding: 20px;
       box-sizing: border-box;
       text-align: center;
@@ -22,9 +21,9 @@
 
     .garden {
       display: flex;
-      gap: 20px;
       flex-wrap: wrap;
       justify-content: center;
+      gap: 20px;
       max-width: 1000px;
       margin: 40px 0;
     }
@@ -138,30 +137,31 @@
       box-shadow: 0 6px 12px rgba(0,0,0,0.2);
     }
 
-    /* ------------------ RESPONSIVE ------------------ */
+    /* ✅ RESPONSIVE para pantallas pequeñas */
     @media (max-width: 600px) {
       .sunflower {
-        width: 60px;
+        width: 65px;
         height: 100px;
+        margin: 10px;
       }
 
       .flower {
-        width: 50px;
-        height: 50px;
+        width: 45px;
+        height: 45px;
       }
 
       .petal {
-        width: 15px;
-        height: 30px;
+        width: 12px;
+        height: 26px;
       }
 
       .center {
-        width: 30px;
-        height: 30px;
+        width: 25px;
+        height: 25px;
       }
 
       .stem {
-        height: 50px;
+        height: 40px;
       }
 
       .message-text {
@@ -172,6 +172,10 @@
       button {
         font-size: 0.9rem;
         padding: 8px 16px;
+      }
+
+      .garden {
+        gap: 10px;
       }
     }
   </style>
