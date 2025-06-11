@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>mensajito para la niña coqueta</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      background: linear-gradient(to top, #fff7e6, #ffffff);
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 100vh;
+      overflow: auto;
+      padding: 20px;
+      box-sizing: border-box;
+      text-align: center;
+    }
+
+    .garden {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+      max-width: 1000px;
+      margin: 40px 0;
+    }
+
+    .sunflower {
+      position: relative;
+      width: 80px;
+      height: 120px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      animation: grow 1s ease-out forwards;
+      transform: scaleY(0);
+    }
+
+    .stem {
+      width: 6px;
+      height: 60px;
+      background-color: #2e7d32;
+      margin: 0 auto;
+      border-radius: 0 0 3px 3px;
+    }
+
+    .flower {
+      width: 60px;
+      height: 60px;
+      position: relative;
+      margin-bottom: 10px;
+    }
+
+    .petal {
+      position: absolute;
+      width: 20px;
+      height: 40px;
+      background: radial-gradient(circle at 30% 30%, #ffeb3b, #fbc02d);
+      border-radius: 50%;
+      transform-origin: center bottom;
+    }
+
+    .petal:nth-child(1)  { transform: rotate(0deg)   translateY(-20px); }
+    .petal:nth-child(2)  { transform: rotate(30deg)  translateY(-20px); }
+    .petal:nth-child(3)  { transform: rotate(60deg)  translateY(-20px); }
+    .petal:nth-child(4)  { transform: rotate(90deg)  translateY(-20px); }
+    .petal:nth-child(5)  { transform: rotate(120deg) translateY(-20px); }
+    .petal:nth-child(6)  { transform: rotate(150deg) translateY(-20px); }
+    .petal:nth-child(7)  { transform: rotate(180deg) translateY(-20px); }
+    .petal:nth-child(8)  { transform: rotate(210deg) translateY(-20px); }
+    .petal:nth-child(9)  { transform: rotate(240deg) translateY(-20px); }
+    .petal:nth-child(10) { transform: rotate(270deg) translateY(-20px); }
+    .petal:nth-child(11) { transform: rotate(300deg) translateY(-20px); }
+    .petal:nth-child(12) { transform: rotate(330deg) translateY(-20px); }
+
+    .center {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 40px;
+      height: 40px;
+      background: radial-gradient(circle, #4e342e, #3e2723);
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+      box-shadow: 0 0 5px rgba(0,0,0,0.4);
+    }
+
+    @keyframes grow {
+      to {
+        transform: scaleY(1);
+      }
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 1rem;
+      background-color: #ff9800;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+      transition: background 0.3s;
+      margin-bottom: 20px;
+    }
+
+    button:hover {
+      background-color: #e67e22;
+    }
+
+    .message-container {
+      margin-top: 30px;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s ease;
+    }
+
+    .message-container.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .message-text {
+      font-size: 1.6rem;
+      color: #a0611f;
+      margin-bottom: 15px;
+    }
+
+    .flower-img {
+      max-width: 100%;
+      width: 220px;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    }
+
+    /* ------------------ RESPONSIVE ------------------ */
+    @media (max-width: 600px) {
+      .sunflower {
+        width: 60px;
+        height: 100px;
+      }
+
+      .flower {
+        width: 50px;
+        height: 50px;
+      }
+
+      .petal {
+        width: 15px;
+        height: 30px;
+      }
+
+      .center {
+        width: 30px;
+        height: 30px;
+      }
+
+      .stem {
+        height: 50px;
+      }
+
+      .message-text {
+        font-size: 1.2rem;
+        padding: 0 10px;
+      }
+
+      button {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="garden">
+    <!-- Girasoles -->
+    <div class="sunflower">
+      <div class="flower">
+        <div class="petal"></div><div class="petal"></div><div class="petal"></div>
+        <div class="petal"></div><div class="petal"></div><div class="petal"></div>
+        <div class="petal"></div><div class="petal"></div><div class="petal"></div>
+        <div class="petal"></div><div class="petal"></div><div class="petal"></div>
+        <div class="center"></div>
+      </div>
+      <div class="stem"></div>
+    </div>
+    <div class="sunflower">
+      <div class="flower">
+        <div class="petal"></div><div class="petal"></div><div class="petal"></div>
+        <div class="petal"></div><div class="petal"></div><div class="petal"></div>
+        <div class="petal"></div><div class="petal"></div><div class="petal"></div>
+        <div class="petal"></div><div class="petal"></div><div class="petal"></div>
+        <div class="center"></div>
+      </div>
+      <div class="stem"></div>
+    </div>
+    <div class="sunflower">
+      <div class="flower">
+        <div class="petal"></div><div class="petal"></div><div class="petal"></div>
+        <div class="petal"></div><div class="petal"></div><div class="petal"></div>
+        <div class="petal"></div><div class="petal"></div><div class="petal"></div>
+        <div class="petal"></div><div class="petal"></div><div class="petal"></div>
+        <div class="center"></div>
+      </div>
+      <div class="stem"></div>
+    </div>
+  </div>
+
+  <button onclick="document.querySelector('.message-container').classList.add('visible')">
+    Ver mensaje
+  </button>
+
+  <div class="message-container">
+    <div class="message-text">🌻 Una flor para que te sientas mejor y tu día brille más 💛</div>
+    <img class="flower-img" src="https://i.pinimg.com/474x/8d/0a/44/8d0a442e4cbefacea53306c89151c54f.jpg" alt="Flor para ti">
+  </div>
+
+</body>
+</html>
